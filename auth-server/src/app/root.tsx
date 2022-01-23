@@ -1,5 +1,6 @@
 import {
     Links,
+    LinksFunction,
     LiveReload,
     Meta,
     MetaFunction,
@@ -7,6 +8,11 @@ import {
     Scripts,
     ScrollRestoration
 } from 'remix';
+import theme from '~/index.css';
+
+export const links: LinksFunction = () => {
+    return [{ rel: 'stylesheet', href: theme }];
+};
 
 export const meta: MetaFunction = () => {
     return { title: 'Remix Auth Server' };
